@@ -26,7 +26,9 @@ axios.get(endopoint)
                                         </div>   
                                     </div>
                                     `
+                
             }
+
         })
         .catch(error =>{
             // codice da eseguire in caso di errore

@@ -20,6 +20,7 @@ main {
     overflow: auto;  
 }
 
+
 /************** DIMENSIONI PIN ****************/
 .pin-dimension {
     width: 30px;
@@ -28,6 +29,9 @@ main {
     bottom: 360px;
 }
 /************** MOVIMENTO CARD ****************/
+/* .card {
+    max-width: 100%; */
+/* } */
 .card:hover {
     /* transform: rotate(35deg); */
     transition-duration: 1s;
@@ -48,8 +52,50 @@ main {
 
 
 /************** MDEIA QUERY PER IL TITOLO IN VERSIONE MOBILE SM ****************/
-@media (max-width: 556px) {
+@media (max-width: 576px) {
+    header {
+    display: flex;
+    align-items: center
+    };
     header h1 {
         font-size: 60px;
     }
+    .container-query {
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px){
+    .container-query {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .pin-dimension {
+        width: 30px;
+        z-index: 30;
+        left: 125px;
+        bottom: 326px;
+    }
+
+}
+@media (max-width: 992px){
+    .container-query {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .pin-dimension {
+        width: 30px;
+        z-index: 30;
+        left: 147px;
+        bottom: 362px;
+    }
+    
 }

@@ -53,19 +53,19 @@ main {
 .overlay-button {
     font-size: 20px;
     font-weight: bold;
-    top: 3%;
+    top: 9%;
     left: 500px;
     position: absolute;
     position: fixed;
-    right: 47%;
-    left: 47%;
+    right: 36%;
+    left: 42%;
     z-index: 60;
 }
 .img-overlay {
     position: absolute;
-    width: 30%;
-    top: 14%;
-    right: 35%;
+    width: 80%;
+    top: 18%;
+    right: 10%;
     z-index: 60;
 }
 
@@ -95,11 +95,66 @@ main {
 }
 
 /* VERSIONE TABLET */
-@media screen and (min-width: 768px){
+/* Le regole si applicano solo per schermi tra 768px e 992px */
+@media screen and (min-width: 768px) and (max-width: 992px){
     /************** SETTAGGIO REGOLE HEADER ****************/
     header h1 {
         font-size: 80px;
     }
+
+    /* Container per le card */
+    .container-card {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 20rem;
+        margin-bottom: 20px;
+    }
+
+    /* GESTIONE OVERLAY */
+    .overlay {
+        position: fixed;
+        top: 0;  
+        left: 0; 
+        height: 100vh; /* Utilizza tutta l'altezza del viewport */
+        width: 100vw;  /* Utilizza tutta la larghezza del viewport */
+        background-color: rgba(10, 9, 9, 0.753);
+        z-index: 60;
+    }
+
+    .overlay-button {
+        font-size: 20px;
+        font-weight: bold;
+        top: 5%; 
+        left: 50%;
+        transform: translateX(-50%);  /* Centra il bottone orizzontalmente */
+        position: absolute;
+        z-index: 61;
+    }
+
+    .img-overlay {
+        position: absolute;
+        max-width: 40%; 
+        top: 18%;
+        left: 50%; 
+        transform: translateX(-50%); /* Centra l'immagine orizzontalmente */
+        z-index: 60;
+    }
+}
+
+/* VERSIONE DESKTOP (da 922px in su) */
+@media screen and (min-width: 922px) {
+    header h1 {
+        font-size: 80px;
+    }
+
     .container-card {
         width: 90%;
         margin: 0 auto;
@@ -108,11 +163,30 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
-        margin-bottom: 0;
     }
+
     .card {
-        max-width: 20rem;
+        max-width: 16rem;
         margin-bottom: 20px;
-        
+    }
+
+    /* GESTIONE OVERLAY */
+    .overlay {
+        background-color: rgba(10, 9, 9, 0.753);
+    }
+
+    .overlay-button {
+        font-size: 20px;
+        font-weight: bold;
+        top: 3%;
+        right: 45%;
+        left: 44%;
+    }
+
+    .img-overlay {
+        max-width: 37%;
+        top: 15%;
+        right: 39%;
+        left: 32%;
     }
 }

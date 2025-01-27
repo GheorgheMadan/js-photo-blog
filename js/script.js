@@ -48,7 +48,7 @@ axios.get(endpoint)
 
                         // con innerHTML aggiungo in pagina l'immagine
                         outputOverlay.innerHTML += `
-                                                    <button class="btn btn-warning overlay-button">CHIUDI</button>
+                                                    <button class="btn btn-light overlay-button">CHIUDI</button>
                                                     <img src="${imgUrl}" alt="..." class="card-image img-overlay">
                                                     `;
 

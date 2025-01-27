@@ -7,41 +7,73 @@
 header{
     background-image: url(../img/wall.png);
     height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 header h1 {
     font-weight: bolder;
-    font-size: 80px;
+    font-size: 50px;
 }
 
-/************** SETTAGGIO SFONDO DEL MAIN ****************/
+/************** SETTAGGIO REGOLE DEL MAIN ****************/
 main {
     background-image: url(../img/cork.png);
-    height: calc(100vh - 100px); 
-    overflow: auto;  
+    background-size: cover;
+    height: calc(100vh - 100px);
+    background-position: center;
+    min-height: 100vh; 
+    overflow-y: auto;
+}
+/* REGOLE CONTAINER DELLE CARD */
+.container-card {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-
-/************** DIMENSIONI PIN ****************/
-.pin-dimension {
-    width: 30px;
-    z-index: 30;
-    left: 145px;
-    bottom: 360px;
+/*** REGOLE CARD ***/
+.card {
+    min-width: 20rem;
+    margin-bottom: 20px;
+    position: relative;
 }
-/************** MOVIMENTO CARD ****************/
-/* .card {
-    max-width: 100%; */
-/* } */
-.card:hover {
-    /* transform: rotate(35deg); */
+/*
+.img-overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100vw; /* IMPONDO LARGHEZZA COMPLETA */
+    /*height: 100vh; /* IMPONDO ALTEZZA COMPLETA */
+    /*background-color: rgba(0, 0, 0, 0.8); /* SFONDO SCURO E OPACO */
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40; /* ASSICURO CHE SIA SOPRA L'IMMAGINE */
+/*}
+
+/*** HOVER regole rotazione card ***/
+.card-hover:hover {
     transition-duration: 1s;
-    transform: translate(10px, 20px) scale(1.2) rotate(35deg);
+    transform: translate(10px, 20px) scale(1.2) rotate(15deg);
     z-index: 35;
-
-
+    cursor: pointer;
+}
+/*** REGOLE PIN ROSSO DEL CARD ***/
+.pin-dimension {
+    position: fixed;
+    width: 9%;
+    z-index: 30;
+    left: 48%;
+    bottom: 94%;
 }
 
-/************** DIMENSIONE CONTAINER LG ****************/
+
+/*** REGOLE TESTO DATA DEL CARD ***/
 .text {
     font-family: Sometype Mono, monospace;
     color: gray;
@@ -49,53 +81,25 @@ main {
     font-size: 12px;
 }
 
-
-
-/************** MDEIA QUERY PER IL TITOLO IN VERSIONE MOBILE SM ****************/
-@media (max-width: 576px) {
-    header {
-    display: flex;
-    align-items: center
-    };
+/* VERSIONE TABLET */
+@media screen and (min-width: 768px){
+    /************** SETTAGGIO REGOLE HEADER ****************/
     header h1 {
-        font-size: 60px;
+        font-size: 80px;
     }
-    .container-query {
-        width: 65%;
+    .container-card {
+        width: 90%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 0;
     }
-
-}
-
-@media (max-width: 768px){
-    .container-query {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
+    .card {
+        max-width: 20rem;
+        margin-bottom: 20px;
+        
     }
-    .pin-dimension {
-        width: 30px;
-        z-index: 30;
-        left: 125px;
-        bottom: 326px;
-    }
-
-}
-@media (max-width: 992px){
-    .container-query {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-    .pin-dimension {
-        width: 30px;
-        z-index: 30;
-        left: 147px;
-        bottom: 362px;
-    }
-    
 }

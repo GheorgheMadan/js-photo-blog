@@ -17,20 +17,16 @@ axios.get(endopoint)
 
                 // pusho in pagina  
                 output.innerHTML += `
-                                <div class="col-lg-4 col-md-6 col-sm-12 g-4">
-                                    <div class="card p-3 rounded-0 shadow-lg position-relative" style="width: 20rem;">
-                                        <img src="./img/pin.svg" class="pin-dimension position-absolute shadow-lg" alt="">
-                                        <img src="${url}" alt="...">
+                                    <div class="card card-hover p-3 rounded-0 shadow-lg">
+                                        <img src="./img/pin.svg" class="pin-dimension position-absolute shadow-lg d-inline" alt="">
+                                        <img src="${url}" alt="..." class="card-image">
                                         <div class="mt-3">
                                             <p class="text">${date}</p>
                                             <h5 class="card-title fw-bolder">${title.toUpperCase()}</h5> 
                                         </div>   
                                     </div>
-                                </div
-                                    `
-            }
-
-
+                                    `                
+             }
         })
         .catch(error =>{
             // codice da eseguire in caso di errore

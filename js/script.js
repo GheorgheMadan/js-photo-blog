@@ -1,5 +1,6 @@
 // richiamo l'output dal dom 
 const output = document.querySelector('.output')
+const outputOverlay = document.querySelector('.overlay')
 
 //richiamo l'endopoint 
 const endopoint = 'https://lanciweb.github.io/demo/api/pictures/'
@@ -25,7 +26,7 @@ axios.get(endopoint)
                                             <h5 class="card-title fw-bolder">${title.toUpperCase()}</h5> 
                                         </div>   
                                     </div>
-                                    `                
+                                    `     
              }
         })
         .catch(error =>{

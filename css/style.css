@@ -6,7 +6,7 @@
 /************** SETTAGGIO REGOLE HEADER ****************/
 header{
     background-image: url(../img/wall.png);
-    height: 100px;
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@ header h1 {
 main {
     background-image: url(../img/cork.png);
     background-size: cover;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     background-position: center;
     min-height: 100vh; 
     overflow-y: auto;
@@ -40,21 +40,33 @@ main {
     margin-bottom: 20px;
     position: relative;
 }
-/*
+
+/* GESTIONE OVERLAY */
+.overlay {
+    position: absolute;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 60;
+    background-color: rgba(10, 9, 9, 0.753);
+}
+.overlay button {
+    font-size: 20px;
+    font-weight: bold;
+    top: 3%;
+    left: 500px;
+    position: absolute;
+    position: fixed;
+    right: 47%;
+    left: 47%;
+}
 .img-overlay {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-    width: 100vw; /* IMPONDO LARGHEZZA COMPLETA */
-    /*height: 100vh; /* IMPONDO ALTEZZA COMPLETA */
-    /*background-color: rgba(0, 0, 0, 0.8); /* SFONDO SCURO E OPACO */
-    /*display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 40; /* ASSICURO CHE SIA SOPRA L'IMMAGINE */
-/*}
+    width: 30%;
+    top: 14%;
+    right: 35%;
+
+}
 
 /*** HOVER regole rotazione card ***/
 .card-hover:hover {

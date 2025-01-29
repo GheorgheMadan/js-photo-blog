@@ -45,13 +45,11 @@ axios.get(endpoint)
                          // prima pulisco l'overlay
                         outputOverlay.innerHTML = '';
 
-
                         // con innerHTML aggiungo in pagina l'immagine
                         outputOverlay.innerHTML += `
                                                     <button class="btn btn-light overlay-button">CHIUDI</button>
                                                     <img src="${imgUrl}" alt="..." class="card-image img-overlay">
                                                     `;
-
                         // RIMUOVO LA CLASSE D-NONE 
                         outputOverlay.classList.remove('d-none');
                         // AGGIUNGO LA CLASSE D-INLINE
@@ -70,9 +68,6 @@ axios.get(endpoint)
                             });
                     })
             })
-                 
-            
-
         })
         .catch(error =>{
             // codice da eseguire in caso di errore
